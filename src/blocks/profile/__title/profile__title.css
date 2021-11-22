@@ -1,0 +1,25 @@
+.profile__title {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 294px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /* макет кривой из-за этого надо ограничить текст, чтобы все остальное встало как нужно */
+}
+
+@media screen and (max-width: 768px) {
+    .profile__title {
+        max-width: 189px;
+        grid-column: 2;
+        font-size: 27px;
+        line-height: 33px;
+    }
+}

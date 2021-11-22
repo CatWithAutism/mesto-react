@@ -1,0 +1,27 @@
+.page {
+    min-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+@media screen and (min-width: 425px) {
+    .page {
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+        min-width: 680px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .page {
+        min-width: 880px;
+    }
+}

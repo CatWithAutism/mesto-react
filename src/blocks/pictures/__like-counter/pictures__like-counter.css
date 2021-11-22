@@ -1,0 +1,11 @@
+.pictures__like-counter {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    margin-top: 3px;
+  }

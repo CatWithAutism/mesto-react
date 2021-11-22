@@ -1,0 +1,24 @@
+.popup__closing-button {
+    background-image: url(../../../images/close.svg);
+    grid-column: 3;
+    grid-row: 1;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background-color: transparent;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.popup__closing-button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+    .popup__closing-button {
+        width: 20px;
+        height: 20px;
+        grid-column: 2;
+        justify-self: flex-end;
+    }
+}

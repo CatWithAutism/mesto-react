@@ -1,0 +1,21 @@
+.popup {
+    display: grid;
+    transition: visibility 0.5s, opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr max-content 1fr;
+    gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .popup {
+        row-gap: 16px;
+    }
+}

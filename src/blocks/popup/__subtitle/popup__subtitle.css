@@ -1,0 +1,16 @@
+.popup__subtitle {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-bottom: 0;
+    max-width: 280px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    font-family: Inter;
+}

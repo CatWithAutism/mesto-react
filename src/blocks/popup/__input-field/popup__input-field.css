@@ -1,0 +1,29 @@
+.popup__input-field {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background-color: transparent;
+    width: 84%;
+    /* это специально, чтобы оно было адаптивным и ПОЧТИ сходилось на макетах :) */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 0 0;
+    padding-bottom: 13px;
+    outline: none;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 25px;
+}
+
+.popup__input-field:first-of-type {
+    margin-top: 49px;
+}
+
+@media screen and (max-width: 768px) {
+    .popup__input-field:first-of-type {
+        margin-top: 75px;
+    }
+}
