@@ -71,6 +71,7 @@ function App() {
           userName={currentUser.name}
           userDescription={currentUser.about}
           userAvatar={currentUser.avatar}
+          userId={currentUser._id}
           cards={cards} />
         <Footer />
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ card, onCardClick }) {
+function Card({ card, onCardClick, userId}) {
   return (
     <div className="pictures__element">
       <img className="pictures__picture" alt={card.name} src={card.link} onClick={() => onCardClick(card)} />
@@ -11,7 +11,7 @@ function Card({ card, onCardClick }) {
           <p className="pictures__like-counter">{card.likes.length}</p>
         </div>
       </div>
-      <button className="pictures__remove-button" type="button"></button>
+      {card.ownerId === userId ? (<button className="pictures__remove-button" type="button"></button>) : ""}
     </div>
   );
 }

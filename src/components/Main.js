@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-function Main({ onEditProfile, onEditAvatar, onAddPlace, onCardClick, userName, userDescription, userAvatar, cards }) {
+function Main({ onEditProfile, onEditAvatar, onAddPlace, onCardClick, userName, userDescription, userAvatar, userId, cards }) {
     return (
         <main>
             <section className="profile">
@@ -17,7 +17,7 @@ function Main({ onEditProfile, onEditAvatar, onAddPlace, onCardClick, userName, 
             <section className="pictures">
                 {
                     cards.map(card => {
-                        return (<Card card={card} key={card._id} onCardClick={onCardClick} />)
+                        return (<Card card={card} key={card._id} onCardClick={onCardClick} userId={userId}/>)
                     })
                 }
             </section>
