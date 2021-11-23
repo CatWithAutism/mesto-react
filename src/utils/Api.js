@@ -2,7 +2,7 @@ class Api {
     constructor(options) {
         this._headers = options.headers;
         this._baseUrl = options.baseUrl;
-    } 
+    }
 
     //#region Common
     _getDeserializedJsonObject(url, queryParams = {}) {
@@ -71,7 +71,7 @@ class Api {
     }
     //#endregion
 
-} 
+}
 
 export const api = new Api({
     baseUrl: "https://mesto.nomoreparties.co/v1/cohort-28",
