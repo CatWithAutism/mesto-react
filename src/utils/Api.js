@@ -66,7 +66,7 @@ class Api {
 
     updateLikeState(cardId, isLiked) {
         return this._getDeserializedJsonObject(`cards/likes/${cardId}`, {
-            method: isLiked ? "DELETE" : "PUT",
+            method: isLiked ? "PUT" : "DELETE",
         });
     }
     //#endregion
