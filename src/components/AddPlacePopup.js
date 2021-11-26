@@ -9,10 +9,12 @@ export default function AddPlacePopup({ isOpen, onClose, onAddNewCard }) {
         evt.preventDefault();
 
         onAddNewCard({ name, link });
+    }
 
+    React.useEffect(() => {
         setName("");
         setLink("");
-    }
+    }, [isOpen]);
 
     return (
         <PopupWithForm isOpen={isOpen} onClose={onClose} onSubmit={handleSubmit} name='AddPicture' title='Новое место' submitButtonText="Создать">

@@ -40,7 +40,9 @@ function App() {
     const isLiked = card.likes.some(i => i._id === currentUser._id);
     api.updateLikeState(card._id, !isLiked).then((newCard) => {
       setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
+    }).catch((err) => {
+      console.log(err);
+    });;
   }
 
   function handleUpdateUser(user) {
@@ -75,6 +77,8 @@ function App() {
     if (isMine) {
       api.deleteCard(card._id).then(response => {
         setCards(cards.filter((t) => t._id !== card._id));
+      }).catch((err) => {
+        console.log(err);
       });
     }
   }
@@ -88,20 +92,18 @@ function App() {
   };
 
   useEffect(() => {
-    api.getUserInfo()
-      .then((res) => {
-        setCurrentUser(res);
-      })
+    api.getUserInfo().then((res) => {
+      setCurrentUser(res);
+    })
       .catch((err) => {
         console.log(err);
       });
   }, []);
 
   useEffect(() => {
-    api.getCards()
-      .then((data) => {
-        setCards(data);
-      })
+    api.getCards().then((data) => {
+      setCards(data);
+    })
       .catch((err) => {
         console.error(err);
       });

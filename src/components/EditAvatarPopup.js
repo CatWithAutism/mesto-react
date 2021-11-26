@@ -14,6 +14,10 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
         evt.target.reset();
     }
 
+    React.useEffect(() => {
+        avatar.current.value = "";
+    }, [isOpen]);
+
     return (
         <PopupWithForm name="UpdateProfilePicture" title="Обновить аватар" submitButtonText="Сохранить" isOpen={isOpen} onClose={onClose} onSubmit={handleSubmit}>
             <input id="avatarUrl" name="newAvatar" type="url" required className="popup__input-field" placeholder="Ссылка на картинку" ref={avatar} />
