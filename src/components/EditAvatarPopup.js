@@ -10,8 +10,6 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
         onUpdateAvatar({
             avatar: avatar.current.value,
         });
-
-        evt.target.reset();
     }
 
     React.useEffect(() => {

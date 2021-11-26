@@ -94,8 +94,7 @@ function App() {
   useEffect(() => {
     api.getUserInfo().then((res) => {
       setCurrentUser(res);
-    })
-      .catch((err) => {
+    }).catch((err) => {
         console.log(err);
       });
   }, []);
@@ -103,8 +102,7 @@ function App() {
   useEffect(() => {
     api.getCards().then((data) => {
       setCards(data);
-    })
-      .catch((err) => {
+    }).catch((err) => {
         console.error(err);
       });
   }, []);
